@@ -79,6 +79,9 @@ ftprdp() {
     ftp 195.154.177.120
 }
 
+mp3dl() {
+    youtube-dl --extract-audio --audio-format mp3 $1
+}
 
 source $ZSH/oh-my-zsh.sh
 
