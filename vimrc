@@ -6,6 +6,7 @@ set shiftwidth=4
 set softtabstop=4
 let g:airline_theme='molokai'
 colorscheme monokai
+hi Normal ctermbg=NONE
 set t_Co=256
 set nu
 "autocmd VimEnter * NERDTree
@@ -79,7 +80,7 @@ set ruler
 set cmdheight=2
 
 " A buffer becomes hidden when it is abandoned
-"set hid
+set hid
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent

@@ -79,15 +79,18 @@ ftprdp() {
     ftp 195.154.177.120
 }
 
-mp3dl() {
-    youtube-dl --extract-audio --audio-format mp3 $1
+serveon() {
+    python -m SimpleHTTPServer $1
 }
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/etc/go/bin"
+export GOPATH="/etc/go/"
+export GOBIN="/etc/go/bin"
+export GOROOT="/etc/go/"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
