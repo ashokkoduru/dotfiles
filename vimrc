@@ -1,17 +1,30 @@
 set nocompatible
 filetype off
+
+"""""""""""""""""""""""
+" Vim Airline Settings 
+"""""""""""""""""""""""
 let g:airline#extensions#tabline#enabled = 1
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
 let g:airline_theme='molokai'
-colorscheme monokai
-set t_Co=256
-set nu
+
+colorscheme monokai " Self explanatory
+
+set nu " Toggle number line
+
+"""""""""""""""""""""""""""""""""""""""
+" Enable these options to keep NERDTree
+" open all the time
+"""""""""""""""""""""""""""""""""""""""
 "autocmd VimEnter * NERDTree
 "autocmd BufEnter * NERDTreeMirror
+
+""""""""""""""""""""""""
+" YouCompleteMe Settings
+""""""""""""""""""""""""
 set completeopt=menuone
 let g:ycm_add_preview_to_completeopt=0
+
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -152,6 +165,10 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 set expandtab
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 " Be smart when using tabs ;)
 set smarttab
