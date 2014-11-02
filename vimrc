@@ -7,7 +7,7 @@ filetype off
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='molokai'
 
-colorscheme monokai " Self explanatory
+colorscheme monokaiT " Self explanatory
 
 set nu " Toggle number line
 
@@ -15,8 +15,8 @@ set nu " Toggle number line
 " Enable these options to keep NERDTree
 " open all the time
 """""""""""""""""""""""""""""""""""""""
-"autocmd VimEnter * NERDTree
-"autocmd BufEnter * NERDTreeMirror
+autocmd VimEnter * NERDTree
+autocmd BufEnter * NERDTreeMirror
 
 """"""""""""""""""""""""
 " YouCompleteMe Settings
@@ -36,6 +36,7 @@ Plugin 'bling/vim-airline'
 Bundle 'lsdr/monokai'
 Plugin 'tpope/vim-surround'
 Plugin 'Auto-Pairs'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
