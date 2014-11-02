@@ -37,6 +37,7 @@ Bundle 'lsdr/monokai'
 Plugin 'tpope/vim-surround'
 Plugin 'Auto-Pairs'
 Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
