@@ -50,6 +50,7 @@ ZSH_THEME="dieter"
 # To list directories first
 alias ls='ls --color -h --group-directories-first'
 alias haseeb='ssh root@haseeb.co'
+alias rm='mv -t /root/.trash'
 
 commit() {
     git add --all . && git commit -m "$1" && git push origin master

@@ -1,5 +1,6 @@
 set nocompatible
 filetype off
+set modifiable
 
 """""""""""""""""""""""
 " Vim Airline Settings 
@@ -17,6 +18,8 @@ set nu " Toggle number line
 """""""""""""""""""""""""""""""""""""""
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
+autocmd VimEnter <C-W>j
+autocmd BufEnter <C-W>j
 
 """"""""""""""""""""""""
 " YouCompleteMe Settings
@@ -41,17 +44,6 @@ Plugin 'kien/ctrlp.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -74,6 +66,10 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Open new windows to the right and bottom
+" Taken from thoughbot's vimrc
+set splitbelow
+set splitright
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
