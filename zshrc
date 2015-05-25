@@ -50,7 +50,6 @@ ZSH_THEME="dieter"
 # To list directories first
 alias ls='ls --color -h --group-directories-first'
 alias haseeb='ssh root@haseeb.co'
-alias rm='mv -t /root/.trash'
 
 commit() {
     git add --all . && git commit -m "$1" && git push origin master
@@ -92,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/etc/go/bin"
-export GOPATH="/etc/go/"
+export GOPATH="/root/mygo/"
 export GOBIN="/etc/go/bin"
 export GOROOT="/etc/go/"
 # export MANPATH="/usr/local/man:$MANPATH"

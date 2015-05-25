@@ -2,8 +2,14 @@ set nocompatible
 filetype off
 set modifiable
 
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
 """""""""""""""""""""""
-" Vim Airline Settings 
+" Vim Airline Settings
 """""""""""""""""""""""
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='molokai'
@@ -16,8 +22,8 @@ set nu " Toggle number line
 " Enable these options to keep NERDTree
 " open all the time
 """""""""""""""""""""""""""""""""""""""
-autocmd VimEnter * NERDTree
-autocmd BufEnter * NERDTreeMirror
+"autocmd VimEnter * NERDTree
+"autocmd BufEnter * NERDTreeMirror
 autocmd VimEnter <C-W>j
 autocmd BufEnter <C-W>j
 
@@ -41,6 +47,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'Auto-Pairs'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
+Plugin 'fatih/vim-go'
+Plugin 'jstemmer/gotags'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -60,8 +69,8 @@ set autoread
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = '\'
+let g:mapleader = '\'
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -161,27 +170,22 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-set expandtab
-
 set tabstop=4
-set shiftwidth=4
 set softtabstop=4
-
-" Be smart when using tabs ;)
-set smarttab
-
-" 1 tab == 4 spaces
 set shiftwidth=4
-set tabstop=4
+set expandtab
+		        
+            
+" Be smart when using tabs ;)
+"set smarttab
 
 " Linebreak on 500 characters
-set lbr
-set tw=500
+"set lbr
+"set tw=500
 
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
+"set ai "Auto indent
+"set si "Smart indent
+"set wrap "Wrap lines
 
 
 """"""""""""""""""""""""""""""
@@ -406,3 +410,15 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
+
+" Go lang stuff
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gb <Plug>(go-build)
+au FileType go nmap <leader>gt <Plug>(go-test)
+au FileType go nmap <leader>gc <Plug>(go-coverage)
+au FileType go nmap <Leader>gds <Plug>(go-def-split)
+au FileType go nmap <Leader>gdv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>gdt <Plug>(go-def-tab)
+
+" Map TagBarToggle to <leader>T
+nmap <leader>T :TagbarToggle<CR>
