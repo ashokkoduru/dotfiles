@@ -134,6 +134,11 @@ set novisualbell
 set t_vb=
 set tm=500
 
+"""""""""""""""""""""""""""
+"Copy paste related stuff
+"""""""""""""""""""""""""""
+imap <c-d> <esc>ddi
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -228,6 +233,9 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
+nnoremap <leader>hh :tabprevious<cr>
+nnoremap <leader>ll :tabnext<cr>
+
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -273,6 +281,41 @@ nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+" Ctrl-U to uppper case a word in Insert Mode
+inoremap <c-U> <esc>viwU
+
+" vimrc mappings
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""
+" Operator mappings                       "
+" """""""""""""""""""""""""""""""""""""""""
+" Inside Mappings "
+" """""""""""""""""
+onoremap p i(
+onoremap f i{
+onoremap " i"
+onoremap ' i'
+"""""""""""""""""""""""
+" Inside next mappings
+" """""""""""""""""""""" 
+onoremap in( :<c-u>normal! f(vi(<cr>
+onoremap in{ :<c-u>normal! f{vi{<cr>
+onoremap in" :<c-u>normal! f"vi"<cr>
+onoremap in' :<c-u>normal! f'vi'<cr>
+""""""""""""""""""""""""
+" Inside last mappings
+" """"""""""""""""""""""
+onoremap il( :<c-u>normal! F)vi(<cr>
+onoremap il{ :<c-u>normal! F}vi{<cr>
+onoremap il" :<c-u>normal! F"vi"<cr>
+onoremap il' :<c-u>normal! F'vi'<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""
+
+
 
 if has("mac") || has("macunix")
   nmap <D-j> <M-j>
