@@ -50,12 +50,16 @@ ZSH_THEME="dieter"
 # To list directories first
 alias ls='ls --color -h --group-directories-first'
 
-commit() {
+gacp() {
     git add --all . && git commit -m "$1" && git push origin master
 }
 
 update() {
     git fetch --all && git reset --hard origin/master
+}
+
+gpom() {
+    git push origin master
 }
 
 zshrc() {
