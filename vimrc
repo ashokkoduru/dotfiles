@@ -24,8 +24,8 @@ set nu " Toggle number line
 """""""""""""""""""""""""""""""""""""""
 "autocmd VimEnter * NERDTree
 "autocmd BufEnter * NERDTreeMirror
-autocmd VimEnter <C-W>j
-autocmd BufEnter <C-W>j
+"autocmd VimEnter <C-W>j
+"autocmd BufEnter <C-W>j
 
 """"""""""""""""""""""""
 " YouCompleteMe Settings
@@ -50,6 +50,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'jstemmer/gotags'
 Plugin 'majutsushi/tagbar'
+Plugin 'klen/python-mode'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -289,6 +290,7 @@ inoremap <c-U> <esc>viwU
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+
 """""""""""""""""""""""""""""""""""""""""""
 " Operator mappings                       "
 " """""""""""""""""""""""""""""""""""""""""
@@ -465,3 +467,7 @@ au FileType go nmap <Leader>gdt <Plug>(go-def-tab)
 
 " Map TagBarToggle to <leader>T
 nmap <leader>T :TagbarToggle<CR>
+
+" Python Stuff
+
+au FileType python setl foldmethod=indent
