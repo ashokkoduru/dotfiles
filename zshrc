@@ -62,6 +62,9 @@ gpom() {
     git push origin master
 }
 
+dev() {
+    cd ~/dev
+}
 zshrc() {
     vim ~/.zshrc
 }
