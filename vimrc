@@ -467,7 +467,3 @@ au FileType go nmap <Leader>gdt <Plug>(go-def-tab)
 
 " Map TagBarToggle to <leader>T
 nmap <leader>T :TagbarToggle<CR>
-
-" Python Stuff
-
-au FileType python setl foldmethod=indent
