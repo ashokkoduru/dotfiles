@@ -114,6 +114,8 @@ set smartcase
 
 " Highlight search results
 set hlsearch
+nnoremap <leader>hl :set hlsearch!<cr>
+
 
 " Makes search act like search in modern browsers
 set incsearch 
@@ -211,8 +213,8 @@ map j gj
 map k gk
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
+"map <space> /
+"map <c-space> ?
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
@@ -234,8 +236,8 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
-nnoremap <leader>hh :tabprevious<cr>
-nnoremap <leader>ll :tabnext<cr>
+nnoremap <leader>h :tabprevious<cr>
+nnoremap <leader>l :tabnext<cr>
 
 
 " Opens a new tab with the current buffer's path
@@ -467,3 +469,11 @@ au FileType go nmap <Leader>gdt <Plug>(go-def-tab)
 
 " Map TagBarToggle to <leader>T
 nmap <leader>T :TagbarToggle<CR>
+
+" pymode-vim settings
+let g:pymode_folding=1
+
+" Folding related
+nnoremap <Space> za
+nnoremap <leader>j zm
+nnoremap <leader>k zr
