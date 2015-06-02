@@ -27,6 +27,12 @@ set nu " Toggle number line
 "autocmd VimEnter <C-W>j
 "autocmd BufEnter <C-W>j
 
+"""""""""""""""""""""
+" NERDTree binding
+"""""""""""""""""""""
+noremap <leader>t :NERDTree<cr>
+noremap <leader>tr :NERDTreeMirror<cr>
+
 """"""""""""""""""""""""
 " YouCompleteMe Settings
 """"""""""""""""""""""""
@@ -181,7 +187,7 @@ set noswapfile
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
 		        
             
 " Be smart when using tabs ;)
@@ -470,10 +476,12 @@ au FileType go nmap <Leader>gdt <Plug>(go-def-tab)
 " Map TagBarToggle to <leader>T
 nmap <leader>T :TagbarToggle<CR>
 
-" pymode-vim settings
-let g:pymode_folding=1
-
 " Folding related
 nnoremap <Space> za
 nnoremap <leader>j zm
 nnoremap <leader>k zr
+
+" Pymode related stuff
+let g:pymode_rope=0
+let g:pymode_folding=1
+let g:pymode_lint = 0
