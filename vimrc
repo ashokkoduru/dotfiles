@@ -485,3 +485,6 @@ nnoremap <leader>k zr
 let g:pymode_rope=0
 let g:pymode_folding=1
 let g:pymode_lint = 0
+
+" Quit on <leader>q
+nnoremap <leader>q :q!<CR>
