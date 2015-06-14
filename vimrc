@@ -12,10 +12,10 @@ set listchars=tab:▸\ ,eol:¬
 " Vim Airline Settings
 """""""""""""""""""""""
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='molokai'
+let g:airline_theme='kolor'
 
-colorscheme monokaiT " Self explanatory
-
+set background=dark
+colorscheme monokai 
 set nu " Toggle number line
 
 """""""""""""""""""""""""""""""""""""""
@@ -57,6 +57,7 @@ Plugin 'fatih/vim-go'
 Plugin 'jstemmer/gotags'
 Plugin 'majutsushi/tagbar'
 Plugin 'klen/python-mode'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -155,8 +156,6 @@ imap <c-d> <esc>ddi
 " Enable syntax highlighting
 syntax enable 
 
-"set background=dark
-
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
@@ -194,12 +193,12 @@ set noexpandtab
 "set smarttab
 
 " Linebreak on 500 characters
-"set lbr
-"set tw=500
+set lbr
+set tw=500
 
 "set ai "Auto indent
 "set si "Smart indent
-"set wrap "Wrap lines
+set wrap "Wrap lines
 
 
 """"""""""""""""""""""""""""""
@@ -485,6 +484,8 @@ nnoremap <leader>k zr
 let g:pymode_rope=0
 let g:pymode_folding=1
 let g:pymode_lint = 0
+let g:pymode_options_max_line_length = 500
 
 " Quit on <leader>q
 nnoremap <leader>q :q!<CR>
+nnoremap <leader>w :w<CR>
