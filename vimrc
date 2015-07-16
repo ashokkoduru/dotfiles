@@ -15,7 +15,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='kolor'
 
 set background=dark
-colorscheme monokai 
+colorscheme darkblue 
 set nu " Toggle number line
 
 """""""""""""""""""""""""""""""""""""""
@@ -58,6 +58,9 @@ Plugin 'jstemmer/gotags'
 Plugin 'majutsushi/tagbar'
 Plugin 'klen/python-mode'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-scripts/swamplight'
+Plugin 'vim-scripts/ZoomWin'
+Plugin 'Chiel92/vim-autoformat'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -489,3 +492,7 @@ let g:pymode_options_max_line_length = 500
 " Quit on <leader>q
 nnoremap <leader>q :q!<CR>
 nnoremap <leader>w :w<CR>
+
+" Split | and  -
+nnoremap <leader>- :split<CR> 
+nnoremap <leader>/ :vsplit<CR> 
