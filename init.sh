@@ -7,4 +7,5 @@ sudo apt-get install build-essential -y
 sudo apt-get install python2.7-dev
 sudo apt-get install zsh
 sudo apt-get install unzip htop
+sudo apt-get install exuberant-ctags
 chsh -s $(which zsh)
