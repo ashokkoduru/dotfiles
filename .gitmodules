@@ -1,6 +1,6 @@
-[submodule "vim/bundle/auto-pairs"]
-	path = vim/bundle/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "vim/bundle/Auto-Pairs"]
+	path = vim/bundle/Auto-Pairs
+	url = https://github.com/vim-scripts/Auto-Pairs
 
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
