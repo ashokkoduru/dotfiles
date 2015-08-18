@@ -61,3 +61,7 @@
 [submodule "vim/bundle/swamplight"]
     path = vim/bundle/swamplight
     url = https://github.com/vim-scripts/swamplight
+
+[submodule "vim/bundle/vim-autoformat"]
+    path = vim/bundle/vim-autoformat
+    url = https://github.com/Chiel92/vim-autoformat
