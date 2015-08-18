@@ -30,6 +30,10 @@
     path = vim/bundle/tagbar
     url = https://github.com/majutsushi/tagbar.git
 
+[submodule "vim/bundle/ZoomWin"]
+    path = vim/bundle/ZoomWin
+    url = https://github.com/vim-scripts/ZoomWin.git
+
 [submodule "vim/bundle/vim-go"]
     path = vim/bundle/vim-go
     url = https://github.com/fatih/vim-go.git
