@@ -61,6 +61,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/swamplight'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'Chiel92/vim-autoformat'
+Bundle 'jlanzarotta/bufexplorer'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
