@@ -181,6 +181,7 @@ if has("gui_running")
     set guioptions-=T
     set guioptions+=e
     set t_Co=256
+    set guifont=Source_Code_Pro:h9:cANSI
     set guitablabel=%M\ %t
 endif
 
