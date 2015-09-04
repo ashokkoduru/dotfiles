@@ -8,37 +8,46 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+" NERDTree Tabs
+"let g:nerdtree_tabs_open_on_console_startup = 1
+"let g:nerdtree_tabs_focus_on_files = 1
+
 """""""""""""""""""""""
 " Vim Airline Settings
 """""""""""""""""""""""
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline_theme='kolor'
-
-set background=dark
-colorscheme darkblue 
-set nu " Toggle number line
+let g:airline_left_sep = '>>'
+let g:airline_right_sep = '<<'
+let g:airline_section_b = '%{getcwd()}'
 
 """""""""""""""""""""""""""""""""""""""
 " Enable these options to keep NERDTree
 " open all the time
 """""""""""""""""""""""""""""""""""""""
-"autocmd VimEnter * NERDTree
-"autocmd BufEnter * NERDTreeMirror
+autocmd VimEnter * NERDTree
+autocmd BufEnter * lcd %:p:h
+autocmd VimEnter * wincmd p
+"autocmd BufEnter * NERDTreeMirrorOpen
 "autocmd VimEnter <C-W>j
 "autocmd BufEnter <C-W>j
 
 """""""""""""""""""""
 " NERDTree binding
 """""""""""""""""""""
-noremap <leader>t :NERDTree<cr>
-noremap <leader>tr :NERDTreeMirror<cr>
-
+noremap <leader>t :NERDTreeToggle<cr>
+noremap <leader>ntf :NERDTreeFind<cr>
+noremap <leader>f :NERDTreeFocus<cr>
 """"""""""""""""""""""""
 " YouCompleteMe Settings
 """"""""""""""""""""""""
 set completeopt=menuone
 let g:ycm_add_preview_to_completeopt=0
 
+set background=dark
+colorscheme solarized
+set rnu " Toggle number line
+set nu
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -61,9 +70,16 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/swamplight'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'Chiel92/vim-autoformat'
+"""Bundle 'jlanzarotta/bufexplorer'
+Plugin 'Shougo/unite.vim'
+Plugin 'szw/vim-ctrlspace'
+Bundle 'StanAngeloff/php.vim'
+Bundle 'mattn/emmet-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+let g:bufferline_echo=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -82,7 +98,7 @@ set autoread
 " like <leader>w saves the current file
 let mapleader = '\'
 let g:mapleader = '\'
-
+nmap \ ;
 " Fast saving
 nmap <leader>w :w!<cr>
 
@@ -158,7 +174,7 @@ imap <c-d> <esc>ddi
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
-
+set t_Co=256
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
@@ -297,7 +313,7 @@ vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 inoremap <c-U> <esc>viwU
 
 " vimrc mappings
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 
@@ -397,9 +413,6 @@ map <leader>s? z=
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-" Quickly open a buffer for scripbble
-map <leader>q :e ~/buffer<cr>
-
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
@@ -492,7 +505,36 @@ let g:pymode_options_max_line_length = 500
 " Quit on <leader>q
 nnoremap <leader>q :q!<CR>
 nnoremap <leader>w :w<CR>
+inoremap <C-s> :w<CR>
+inoremap <C-q> :q<CR>
 
 " Split | and  -
 nnoremap <leader>- :split<CR> 
 nnoremap <leader>/ :vsplit<CR> 
+
+" Maximize Buffer
+noremap <leader>fu :only<CR>
+
+" best Vim Mapping ever !
+noremap <C-Up> <C-w>k
+noremap <C-Down> <C-w>j
+noremap <C-Left> <C-w>h
+noremap <C-Right> <C-w>l
+noremap <Up> k
+noremap <Down> j
+noremap <Left> h
+noremap <Right> l
+set showtabline=0
+let g:CtrlSpaceUseTabline=0
+
+"iunmap <C-p>
+inoremap <C-O> <Esc>O
+inoremap <C-o> <Esc>o
+inoremap <C-d> <Esc>caw
+inoremap <C-D> <Esc>daw
+inoremap <C-p> <Esc>p
+inoremap <C-P> <Esc>P
+
+noremap <leader>p :CtrlP<cr> 
+noremap <leader>b :CtrlPBuffer<cr> 
+
