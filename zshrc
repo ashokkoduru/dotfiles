@@ -6,8 +6,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="random"
-#ZSH_THEME="dieter"
-ZSH_THEME="wedisagree"
+ZSH_THEME="dieter"
+#ZSH_THEME="bira"
+#ZSH_THEME="wedisagree"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -75,7 +76,7 @@ vimrc() {
 }
 
 dotfiles() {
-    cd ~/dotfiles
+    cd ~/.dotfiles
 }
 dotvim() {
     cd ~/.vim

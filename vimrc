@@ -70,11 +70,13 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/swamplight'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'Chiel92/vim-autoformat'
-"""Bundle 'jlanzarotta/bufexplorer'
 Plugin 'Shougo/unite.vim'
 Plugin 'szw/vim-ctrlspace'
 Bundle 'StanAngeloff/php.vim'
 Bundle 'mattn/emmet-vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -538,3 +540,11 @@ inoremap <C-P> <Esc>P
 noremap <leader>p :CtrlP<cr> 
 noremap <leader>b :CtrlPBuffer<cr> 
 
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<F1>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
