@@ -15,11 +15,26 @@ set listchars=tab:▸\ ,eol:¬
 """""""""""""""""""""""
 " Vim Airline Settings
 """""""""""""""""""""""
-let g:airline#extensions#tabline#enabled = 0
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+let g:airline#extensions#tabline#show_close_button = 1
+let g:airline#extensions#tabline#close_symbol = 'X'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamecollapse = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme='kolor'
-let g:airline_left_sep = '>>'
-let g:airline_right_sep = '<<'
 let g:airline_section_b = '%{getcwd()}'
+let g:airline_powerline_fonts=1
+let g:airline#extensions#branch#enabled = 1
+let g:airline_section_z = "%3p%% %{g:airline_symbols.branch}%#__accent_bold#%4l%#__restore__#:%3c"
 
 """""""""""""""""""""""""""""""""""""""
 " Enable these options to keep NERDTree
@@ -76,7 +91,7 @@ Bundle 'StanAngeloff/php.vim'
 Bundle 'mattn/emmet-vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-
+Plugin 'tpope/vim-fugitivv'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -548,3 +563,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" Useful Buffer Mappings
+nnoremap <leader>l :bnext<CR> 
+nnoremap <leader>h :bNext<CR> 
