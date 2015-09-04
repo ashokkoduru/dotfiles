@@ -577,4 +577,4 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Useful Buffer Mappings
 nnoremap <leader>l :bnext<CR> 
-nnoremap <leader>h :bNext<CR> 
+nnoremap <leader>a :bNext<CR> 
