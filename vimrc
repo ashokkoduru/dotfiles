@@ -6,11 +6,7 @@ set modifiable
 nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:â–¸\ ,eol:Â¬
-
-" NERDTree Tabs
-"let g:nerdtree_tabs_open_on_console_startup = 1
-"let g:nerdtree_tabs_focus_on_files = 1
+set listchars=tab:▸\ ,eol:¬
 
 " NERDTree Tabs
 "let g:nerdtree_tabs_open_on_console_startup = 1
@@ -21,12 +17,9 @@ set listchars=tab:â–¸\ ,eol:Â¬
 """""""""""""""""""""""
 let g:airline#extensions#tabline#enabled = 0
 let g:airline_theme='kolor'
-<<<<<<< HEAD
 let g:airline_left_sep = '>>'
 let g:airline_right_sep = '<<'
 let g:airline_section_b = '%{getcwd()}'
-=======
->>>>>>> bbdbbac6e826af643e108e7626f8110e50d0a51d
 
 """""""""""""""""""""""""""""""""""""""
 " Enable these options to keep NERDTree
@@ -42,11 +35,7 @@ autocmd VimEnter * wincmd p
 """""""""""""""""""""
 " NERDTree binding
 """""""""""""""""""""
-<<<<<<< HEAD
 noremap <leader>t :NERDTreeToggle<cr>
-=======
-noremap <leader>t :NERDTreeMirrorOpen<cr>
->>>>>>> bbdbbac6e826af643e108e7626f8110e50d0a51d
 noremap <leader>ntf :NERDTreeFind<cr>
 noremap <leader>f :NERDTreeFocus<cr>
 """"""""""""""""""""""""
@@ -57,12 +46,8 @@ let g:ycm_add_preview_to_completeopt=0
 
 set background=dark
 colorscheme solarized
-<<<<<<< HEAD
 set rnu " Toggle number line
 set nu
-=======
-set nu " Toggle number line
->>>>>>> bbdbbac6e826af643e108e7626f8110e50d0a51d
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -74,7 +59,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Bundle 'lsdr/monokai'
 Plugin 'tpope/vim-surround'
-Plugin 'Raimondi/delimitMate'
+Plugin 'Auto-Pairs'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
@@ -85,24 +70,11 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/swamplight'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'Chiel92/vim-autoformat'
-<<<<<<< HEAD
 """Bundle 'jlanzarotta/bufexplorer'
 Plugin 'Shougo/unite.vim'
 Plugin 'szw/vim-ctrlspace'
 Bundle 'StanAngeloff/php.vim'
 Bundle 'mattn/emmet-vim'
-=======
-"Plugin 'jistr/vim-nerdtree-tabs'
-Bundle 'jlanzarotta/bufexplorer'
-Plugin 'Shougo/vimfiler.vim'
-Plugin 'Shougo/unite.vim'
-Plugin 'szw/vim-ctrlspace'
-"Plugin 'xolox/vim-session'
-"Plugin 'xolox/vim-misc'
-"Bundle 'tpope/vim-vinegari'
-"Plugin 'bling/vim-bufferline'
-"Plugin 'itchyny/lightline.vim'
->>>>>>> bbdbbac6e826af643e108e7626f8110e50d0a51d
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -208,7 +180,6 @@ if has("gui_running")
     set guioptions-=T
     set guioptions+=e
     set t_Co=256
-    set guifont=Source_Code_Pro:h9:cANSI
     set guitablabel=%M\ %t
 endif
 
@@ -555,7 +526,6 @@ noremap <Left> h
 noremap <Right> l
 set showtabline=0
 let g:CtrlSpaceUseTabline=0
-<<<<<<< HEAD
 
 "iunmap <C-p>
 inoremap <C-O> <Esc>O
@@ -568,6 +538,3 @@ inoremap <C-P> <Esc>P
 noremap <leader>p :CtrlP<cr> 
 noremap <leader>b :CtrlPBuffer<cr> 
 
-=======
-"let g:airline_exclude_preview = 1
->>>>>>> bbdbbac6e826af643e108e7626f8110e50d0a51d
