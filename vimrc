@@ -24,6 +24,8 @@ let g:airline#extensions#tabline#close_symbol = 'X'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamecollapse = 1
+" let g:airline#extensions#tabline#fnamemod = ':p:.'
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
@@ -35,6 +37,7 @@ let g:airline_section_b = '%{getcwd()}'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#branch#enabled = 1
 let g:airline_section_z = "%3p%% %{g:airline_symbols.branch}%#__accent_bold#%4l%#__restore__#:%3c"
+let g:airline#extensions#tabline#fnametruncate = 1
 
 """""""""""""""""""""""""""""""""""""""
 " Enable these options to keep NERDTree
