@@ -7,6 +7,9 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="random"
 ZSH_THEME="dieter"
+ZSH_THEME="agnoster"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="josh"
 #ZSH_THEME="bira"
 #ZSH_THEME="wedisagree"
 # Uncomment the following line to use case-sensitive completion.

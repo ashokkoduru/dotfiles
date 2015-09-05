@@ -33,9 +33,9 @@ let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme='kolor'
-let g:airline_theme='laederon'
-let g:airline_theme='light'
-let g:airline_theme='murmur'
+"let g:airline_theme='laederon'
+"let g:airline_theme='light'
+"let g:airline_theme='murmur'
 let g:airline_theme='luna'
 let g:airline_section_b = '%{getcwd()}'
 let g:airline_powerline_fonts=1
@@ -581,4 +581,4 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Useful Buffer Mappings
 nnoremap <leader>l :bnext<CR> 
-nnoremap <leader>a :bNext<CR> 
+nnoremap <leader>h :bNext<CR> 
