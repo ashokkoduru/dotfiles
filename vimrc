@@ -57,7 +57,7 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 " Enable these options to keep NERDTree
 " open all the time
 """""""""""""""""""""""""""""""""""""""
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 autocmd BufEnter * lcd %:p:h
 autocmd VimEnter * wincmd p
 "autocmd BufEnter * NERDTreeMirrorOpen
@@ -108,7 +108,7 @@ Bundle 'StanAngeloff/php.vim'
 Bundle 'mattn/emmet-vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-fugitivv'
+"Plugin 'tpope/vim-fugitiv'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -582,3 +582,10 @@ let g:UltiSnipsEditSplit="vertical"
 " Useful Buffer Mappings
 nnoremap <leader>l :bnext<CR> 
 nnoremap <leader>h :bNext<CR> 
+nnoremap <C-l> :bnext<CR> 
+nnoremap <C-h> :bNext<CR> 
+let g:CtrlSpaceLoadLastWorkspaceOnStart = 0
+let g:CtrlSpaceSaveWorkspaceOnSwitch = 0
+let g:CtrlSpaceSaveWorkspaceOnExit = 0
+let g:CtrlSpaceUseUnicode = 0
+let g:CtrlSpaceProjectRootMarkers =  []
