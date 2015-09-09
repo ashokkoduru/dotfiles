@@ -104,6 +104,8 @@ Bundle 'StanAngeloff/php.vim'
 Bundle 'mattn/emmet-vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'goldfeld/vim-seek'
 "Plugin 'tpope/vim-fugitiv'
 
 call vundle#end()            " required
@@ -545,30 +547,28 @@ nnoremap <leader>/ :vsplit<CR>
 " Maximize Buffer
 noremap <leader>fu :only<CR>
 
-" best Vim Mapping ever !
+" No ! I'm not using hjkl keys.
+" Moving around windows.
 noremap <C-Up> <C-w>k
 noremap <C-Down> <C-w>j
 noremap <C-Left> <C-w>h
 noremap <C-Right> <C-w>l
+
+" Best Vim mappings ever !
 noremap <Up> k
 noremap <Down> j
 noremap <Left> h
 noremap <Right> l
 
-"iunmap <C-p>
 inoremap <C-O> <Esc>O
 inoremap <C-o> <Esc>o
 inoremap <C-d> <Esc>caw
-inoremap <C-D> <Esc>daw
-inoremap <C-p> <Esc>p
-inoremap <C-P> <Esc>P
 
 noremap <C-B> :CtrlPBuffer<cr>
 noremap <leader>p :CtrlP<cr> 
 noremap <leader>b :CtrlPBuffer<cr> 
-noremap <Tab> :bnext<CR>
-noremap <S-Tab> :bNext<CR>
 
+" Switching to previously edited buffer
 noremap <Home> :b#<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
@@ -584,12 +584,19 @@ nnoremap <leader>l :bnext<CR>
 nnoremap <leader>h :bNext<CR> 
 nnoremap <C-l> :bnext<CR> 
 nnoremap <C-h> :bNext<CR> 
+noremap <Tab> :bnext<CR>
+noremap <S-Tab> :bNext<CR>
+
+" Ctrl-Space Mappings
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 0
 let g:CtrlSpaceSaveWorkspaceOnSwitch = 0
 let g:CtrlSpaceSaveWorkspaceOnExit = 0
 let g:CtrlSpaceUseUnicode = 0
 let g:CtrlSpaceProjectRootMarkers =  []
 
-" php Shit
-
+" php stuff 
 let g:php_syntax_extensions_enabled = ["bcmath", "bz2", "core", "curl", "date", "dom", "ereg", "gd", "gettext", "hash", "iconv", "json", "libxml", "mbstring", "mcrypt", "mhash", "mysql", "mysqli", "openssl", "pcre", "pdo", "pgsql", "phar", "reflection", "session", "simplexml", "soap", "sockets", "spl", "sqlite3", "standard", "tokenizer", "wddx", "xml", "xmlreader", "xmlwriter", "zip", "zlib"]
+
+" Vundle Mappings 
+nnoremap <leader>bi :BundleInstall<cr>
+nnoremap <leader>bc :BundleClean<cr>
