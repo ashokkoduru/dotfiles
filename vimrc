@@ -563,6 +563,7 @@ inoremap <C-D> <Esc>daw
 inoremap <C-p> <Esc>p
 inoremap <C-P> <Esc>P
 
+noremap <C-B> :CtrlPBuffer<cr>
 noremap <leader>p :CtrlP<cr> 
 noremap <leader>b :CtrlPBuffer<cr> 
 noremap <Tab> :bnext<CR>
