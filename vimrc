@@ -3,14 +3,10 @@ filetype off
 set modifiable
 
 " Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
+nmap <leader>ls :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
-
-" NERDTree Tabs
-"let g:nerdtree_tabs_open_on_console_startup = 1
-"let g:nerdtree_tabs_focus_on_files = 1
 
 """""""""""""""""""""""
 " Vim Airline Settings
@@ -569,7 +565,10 @@ inoremap <C-P> <Esc>P
 
 noremap <leader>p :CtrlP<cr> 
 noremap <leader>b :CtrlPBuffer<cr> 
+noremap <Tab> :bnext<CR>
+noremap <S-Tab> :bNext<CR>
 
+noremap <Home> :b#<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<F1>"
@@ -589,3 +588,7 @@ let g:CtrlSpaceSaveWorkspaceOnSwitch = 0
 let g:CtrlSpaceSaveWorkspaceOnExit = 0
 let g:CtrlSpaceUseUnicode = 0
 let g:CtrlSpaceProjectRootMarkers =  []
+
+" php Shit
+
+let g:php_syntax_extensions_enabled = ["bcmath", "bz2", "core", "curl", "date", "dom", "ereg", "gd", "gettext", "hash", "iconv", "json", "libxml", "mbstring", "mcrypt", "mhash", "mysql", "mysqli", "openssl", "pcre", "pdo", "pgsql", "phar", "reflection", "session", "simplexml", "soap", "sockets", "spl", "sqlite3", "standard", "tokenizer", "wddx", "xml", "xmlreader", "xmlwriter", "zip", "zlib"]
