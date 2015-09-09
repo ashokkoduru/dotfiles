@@ -20,7 +20,7 @@ let g:airline#extensions#tabline#close_symbol = 'X'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamecollapse = 1
-" let g:airline#extensions#tabline#fnamemod = ':p:.'
+"let g:airline#extensions#tabline#fnamemod = ':p:.'
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
@@ -106,6 +106,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'goldfeld/vim-seek'
+Plugin 'morhetz/gruvbox'
 "Plugin 'tpope/vim-fugitiv'
 
 call vundle#end()            " required
@@ -171,7 +172,7 @@ set ignorecase
 set smartcase
 
 " Highlight search results
-set hlsearch
+"set hlsearch
 nnoremap <leader>hl :set hlsearch!<cr>
 
 
@@ -553,6 +554,12 @@ noremap <C-Up> <C-w>k
 noremap <C-Down> <C-w>j
 noremap <C-Left> <C-w>h
 noremap <C-Right> <C-w>l
+
+" Window resizing commands, copied from derekwyatt's github
+noremap <silent> <C-F9> :vertical resize -10<CR>
+noremap <silent> <C-F10> :resize +10<CR>
+noremap <silent> <C-F11> :resize -10<CR>
+noremap <silent> <C-F12> :vertical resize +10<CR>
 
 " Best Vim mappings ever !
 noremap <Up> k
