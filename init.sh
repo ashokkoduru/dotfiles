@@ -3,7 +3,7 @@ cd ~
 sudo apt-get install cmake build-essential python2.7-dev zsh unzip htop exuberant-ctags -y
 
 git clone https://github.com/haseebr/dotfiles ".dotfiles"
-git clone --recursive https://github.com/sorin-ionescu/prezto.git ".dotfiles/.zprezto"
+git clone --recursive https://github.com/sorin-ionescu/prezto.git ".dotfiles/zprezto"
 
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vimrc ~/.vimrc
