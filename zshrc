@@ -14,6 +14,15 @@ fi
 
 export TERM=xterm-256color
 
+autoload -U compinit
+compinit
+
+setopt autocd
+setopt extended_glob	
+
+prompt sorin
+prompt steeef
+
 # To list directories first
 alias ls='ls --color -h --group-directories-first'
 
