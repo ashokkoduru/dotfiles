@@ -7,6 +7,7 @@ git clone --recursive https://github.com/sorin-ionescu/prezto.git ".dotfiles/zpr
 
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vimrc ~/.vimrc
+ln -s ~/.dotfiles/screenrc ~/.screenrc
 ln -s ~/.dotfiles/zprezto ~/.zprezto
 ln -s ~/.dotfiles/zshrc ~/.zshrc
 ln -s ~/.dotfiles/zlogin ~/.zlogin

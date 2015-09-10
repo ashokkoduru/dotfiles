@@ -609,4 +609,14 @@ let g:php_syntax_extensions_enabled = ["bcmath", "bz2", "core", "curl", "date", 
 nnoremap <leader>bi :BundleInstall<cr>
 nnoremap <leader>bc :BundleClean<cr>
 
-map <Leader><leader>w <Plug>(easymotion-w)
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+nmap <leader><leader>1 <Plug>(easymotion-s)
+nmap <leader><leader>2 <Plug>(easymotion-s2)
+
+let g:EasyMotion_smartcase = 1
+
+"map <Leader>j <Plug>(easymotion-j)
+"map <Leader>k <Plug>(easymotion-k)
+
+"map <Leader><leader>w <Plug>(easymotion-w)

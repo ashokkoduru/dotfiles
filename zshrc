@@ -12,6 +12,8 @@ fi
 
 # Customize to your needs...
 
+export TERM=xterm-256color
+
 # To list directories first
 alias ls='ls --color -h --group-directories-first'
 
