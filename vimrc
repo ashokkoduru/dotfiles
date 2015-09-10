@@ -65,7 +65,7 @@ autocmd VimEnter * wincmd p
 """""""""""""""""""""
 noremap <leader>t :NERDTreeToggle<cr>
 noremap <leader>ntf :NERDTreeFind<cr>
-noremap <leader>f :NERDTreeFocus<cr>
+noremap <leader>nf :NERDTreeFocus<cr>
 """"""""""""""""""""""""
 " YouCompleteMe Settings
 """"""""""""""""""""""""
@@ -107,6 +107,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'goldfeld/vim-seek'
 Plugin 'morhetz/gruvbox'
+Plugin 'scrooloose/nerdcommenter'
 "Plugin 'tpope/vim-fugitiv'
 
 call vundle#end()            " required
@@ -421,7 +422,7 @@ vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 " To go to the previous search results do:
 "   <leader>p
 "
-map <leader>cc :botright cope<cr>
+"map <leader>cc :botright cope<cr>
 map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
@@ -607,3 +608,5 @@ let g:php_syntax_extensions_enabled = ["bcmath", "bz2", "core", "curl", "date", 
 " Vundle Mappings 
 nnoremap <leader>bi :BundleInstall<cr>
 nnoremap <leader>bc :BundleClean<cr>
+
+map <Leader><leader>w <Plug>(easymotion-w)
