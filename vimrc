@@ -71,6 +71,9 @@ noremap <leader>nf :NERDTreeFocus<cr>
 """"""""""""""""""""""""
 set completeopt=menuone
 let g:ycm_add_preview_to_completeopt=0
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+
 
 set background=dark
 colorscheme solarized
@@ -108,6 +111,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'goldfeld/vim-seek'
 Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'ervandew/supertab'
 "Plugin 'tpope/vim-fugitiv'
 
 call vundle#end()            " required
@@ -580,9 +584,9 @@ noremap <leader>b :CtrlPBuffer<cr>
 noremap <Home> :b#<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<F1>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
