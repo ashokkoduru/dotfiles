@@ -54,8 +54,8 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 " open all the time
 """""""""""""""""""""""""""""""""""""""
 "autocmd VimEnter * NERDTree
-autocmd BufEnter * lcd %:p:h
-autocmd VimEnter * wincmd p
+"autocmd BufEnter * lcd %:p:h
+"autocmd VimEnter * wincmd p
 "autocmd BufEnter * NERDTreeMirrorOpen
 "autocmd VimEnter <C-W>j
 "autocmd BufEnter <C-W>j
@@ -317,11 +317,11 @@ catch
 endtry
 
 " Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
-" Remember info about open buffers on close
+"autocmd BufReadPost *
+     "\ if line("'\"") > 0 && line("'\"") <= line("$") |
+     "\   exe "normal! g`\"" |
+     "\ endif
+"Remember info about open buffers on close
 set viminfo^=%
 
 
