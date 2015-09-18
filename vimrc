@@ -28,11 +28,11 @@ let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme='kolor'
+"let g:airline_theme='kolor'
 "let g:airline_theme='laederon'
 "let g:airline_theme='light'
-"let g:airline_theme='murmur'
-let g:airline_theme='luna'
+let g:airline_theme='murmur'
+"let g:airline_theme='luna'
 let g:airline_section_b = '%{getcwd()}'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#branch#enabled = 1
@@ -76,7 +76,7 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
 
 set background=dark
-colorscheme solarized
+colorscheme gruvbox 
 set rnu " Toggle number line
 set nu
 
@@ -625,3 +625,5 @@ let g:EasyMotion_smartcase = 1
 "map <Leader>k <Plug>(easymotion-k)
 
 "map <Leader><leader>w <Plug>(easymotion-w)
+
+au BufRead,BufNewFile *.tpl setl filetype=html.php sw=2 sts=2 et 
