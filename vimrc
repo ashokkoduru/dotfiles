@@ -112,6 +112,7 @@ Plugin 'goldfeld/vim-seek'
 Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
+Plugin 'valloric/MatchTagAlways'
 "Plugin 'tpope/vim-fugitiv'
 
 call vundle#end()            " required
@@ -611,8 +612,8 @@ let g:CtrlSpaceProjectRootMarkers =  []
 let g:php_syntax_extensions_enabled = ["bcmath", "bz2", "core", "curl", "date", "dom", "ereg", "gd", "gettext", "hash", "iconv", "json", "libxml", "mbstring", "mcrypt", "mhash", "mysql", "mysqli", "openssl", "pcre", "pdo", "pgsql", "phar", "reflection", "session", "simplexml", "soap", "sockets", "spl", "sqlite3", "standard", "tokenizer", "wddx", "xml", "xmlreader", "xmlwriter", "zip", "zlib"]
 
 " Vundle Mappings 
-nnoremap <leader>bi :BundleInstall<cr>
-nnoremap <leader>bc :BundleClean<cr>
+nnoremap <leader>vi :BundleInstall<cr>
+nnoremap <leader>vc :BundleClean<cr>
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
@@ -627,3 +628,12 @@ let g:EasyMotion_smartcase = 1
 "map <Leader><leader>w <Plug>(easymotion-w)
 
 au BufRead,BufNewFile *.tpl setl filetype=html.php sw=2 sts=2 et 
+
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'jinja' : 1,
+	\ 'tpl': 1,
+    \}
+
