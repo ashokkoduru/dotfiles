@@ -2,6 +2,8 @@ set nocompatible
 filetype off
 set modifiable
 
+set scrolljump=5
+
 " Shortcut to rapidly toggle `set list`
 nmap <leader>ls :set list!<CR>
 
@@ -113,6 +115,9 @@ Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
 Plugin 'valloric/MatchTagAlways'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-expand-region'
+Plugin 'terryma/vim-smooth-scroll'
 "Plugin 'tpope/vim-fugitiv'
 
 call vundle#end()            " required
@@ -637,3 +642,8 @@ let g:mta_filetypes = {
 	\ 'tpl': 1,
     \}
 
+
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
