@@ -118,6 +118,8 @@ Plugin 'valloric/MatchTagAlways'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'terryma/vim-expand-region'
 Plugin 'terryma/vim-smooth-scroll'
+Plugin 'xolox/vim-notes'
+Plugin 'xolox/vim-misc'
 "Plugin 'tpope/vim-fugitiv'
 
 call vundle#end()            " required
