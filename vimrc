@@ -581,6 +581,9 @@ noremap <Down> j
 noremap <Left> h
 noremap <Right> l
 
+noremap <C-Up> <C-u>
+noremap <C-Down> <C-d>
+
 inoremap <C-O> <Esc>O
 inoremap <C-o> <Esc>o
 inoremap <C-d> <Esc>caw
