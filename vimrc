@@ -87,7 +87,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+
+if has('win32unix')
+	Plugin 'Shougo/neocomplete.vim'
+else
+	Plugin 'Valloric/YouCompleteMe'
+endif
+
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Bundle 'lsdr/monokai'
@@ -652,3 +658,7 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1"
