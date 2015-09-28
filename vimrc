@@ -87,13 +87,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
-if has('win32unix')
-	Plugin 'Shougo/neocomplete.vim'
-else
-	Plugin 'Valloric/YouCompleteMe'
-endif
-
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Bundle 'lsdr/monokai'
@@ -126,7 +120,7 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'terryma/vim-smooth-scroll'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-misc'
-"Plugin 'tpope/vim-fugitiv'
+Plugin 'tpope/vim-fugitiv'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -191,9 +185,8 @@ set ignorecase
 set smartcase
 
 " Highlight search results
-"set hlsearch
+set hlsearch
 nnoremap <leader>hl :set hlsearch!<cr>
-
 
 " Makes search act like search in modern browsers
 set incsearch 
@@ -661,4 +654,20 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1"
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#enable_auto_select = 1
+
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+
+au FileType php set omnifunc=phpcomplete#CompletePHP
+au FileType css setlocal omnifunc=csscomplete#CompleteCSS
+au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+au FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+au FileType python setlocal omnifunc=pythoncomplete#Complete
+au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+let php_sql_query=1                                                                                        
+let php_htmlInStrings=1
