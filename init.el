@@ -66,9 +66,6 @@
 
 (global-relative-line-numbers-mode)
 
-(load-theme 'solarized-dark)
-(set-frame-font "Monaco")
-
 (defun minibuffer-keyboard-quit ()
   "Abort recursive edit.
 In Delete Selection mode, if the mark is active, just deactivate it;
@@ -86,6 +83,9 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+
+(load-theme 'solarized-dark)
+(set-frame-font "Monaco")
 
 (toggle-frame-maximized)
 
