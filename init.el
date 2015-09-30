@@ -37,6 +37,11 @@
 (global-set-key (kbd "C-x <right>") 'windmove-right)
 (global-set-key (kbd "C-x <left>") 'windmove-left)
 
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
 (evil-leader/set-key
   "/" 'split-window-right
   "-" 'split-window-below
@@ -44,8 +49,20 @@
   "b" 'ido-switch-buffer
   "K" 'split-line)
 
-(define-key
-  evil-normal-state-map ",bd" 'kill-this-buffer)
+(defun my/edit-init-file ()
+  (interactive)
+  (find-file user-init-file))
+
+(defun my/edit-dotspacemacs-file ()
+  (interactive)
+  (find-file dotspacemacs-filepath))
+
+(define-key evil-normal-state-map ";bd" 'kill-this-buffer)
+(define-key evil-normal-state-map ";ei" 'my/edit-init-file)
+(define-key evil-normal-state-map ";es" 'my/edit-dotspacemacs-file)
+(define-key evil-normal-state-map ";df" 'describe-function)
+(define-key evil-normal-state-map ";dv" 'describe-variable)
+(define-key evil-normal-state-map ";dk" 'describe-key)
 
 (global-relative-line-numbers-mode)
 
@@ -69,3 +86,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+
+(toggle-frame-maximized)
+
+;;(split-window-right-and-focus)
+;;(split-window-below)
