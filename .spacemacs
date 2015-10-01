@@ -37,6 +37,7 @@ values."
      spell-checking
      syntax-checking
      version-control
+     themes-megapack
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -179,7 +180,7 @@ values."
    dotspacemacs-highlight-delimiters 'all
    ;; If non nil advises quit functions to keep server open when quitting.
    ;; (default nil)
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    ;; (default '("ag" "pt" "ack" "grep"))
@@ -211,7 +212,7 @@ layers configuration. You are free to put any user code."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("4f81886421185048bd186fbccc98d95fca9c8b6a401771b7457d81f749f5df75" "d737a2131d5ac01c0b2b944e0d2cb0be1c76496bb4ed61be51ff0e5457468974" "bf3ec301ea82ab546efb39c2fdd4412d1188c7382ff3bbadd74a8ecae4121678" default))))
+    ("3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "19352d62ea0395879be564fc36bc0b4780d9768a964d26dfae8aad218062858d" "3632cf223c62cb7da121be0ed641a2243f7ec0130178722554e613c9ab3131de" "66132890ee1f884b4f8e901f0c61c5ed078809626a547dbefbb201f900d03fd8" "4f81886421185048bd186fbccc98d95fca9c8b6a401771b7457d81f749f5df75" "d737a2131d5ac01c0b2b944e0d2cb0be1c76496bb4ed61be51ff0e5457468974" "bf3ec301ea82ab546efb39c2fdd4412d1188c7382ff3bbadd74a8ecae4121678" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

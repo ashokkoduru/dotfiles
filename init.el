@@ -29,13 +29,13 @@
   (configuration-layer/sync)
   (spacemacs/setup-startup-hook)
   (require 'server)
-  ;;(unless (server-running-p) (server-start))
+  (unless (server-running-p) (server-start))
 )
 
-(global-set-key (kbd "C-x <up>") 'windmove-up)
-(global-set-key (kbd "C-x <down>") 'windmove-down)
-(global-set-key (kbd "C-x <right>") 'windmove-right)
-(global-set-key (kbd "C-x <left>") 'windmove-left)
+(global-set-key (kbd "C-c <C-up>") 'windmove-up)
+(global-set-key (kbd "C-c <C-down>") 'windmove-down)
+(global-set-key (kbd "C-c <C-right>") 'windmove-right)
+(global-set-key (kbd "C-c <C-left>") 'windmove-left)
 
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
@@ -46,8 +46,15 @@
   "/" 'split-window-right
   "-" 'split-window-below
   "^" 'spacemacs/toggle-maximize-buffer
+  "d" 'ido-dired
+  "k" 'evil-window-delete
   "b" 'ido-switch-buffer
-  "K" 'split-line)
+  "K" 'split-line
+  "ci" 'evilnc-comment-or-uncomment-lines
+  "cl" 'evilnc-comment-or-uncomment-to-the-line
+  "cc" 'evilnc-copy-and-comment-lines
+  "cp" 'evilnc-comment-or-uncomment-paragraphs
+  "cr" 'comment-or-uncomment-region)
 
 (defun my/edit-init-file ()
   (interactive)
