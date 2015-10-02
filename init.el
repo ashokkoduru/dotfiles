@@ -32,10 +32,10 @@
   (unless (server-running-p) (server-start))
 )
 
-(global-set-key (kbd "C-c <C-up>") 'windmove-up)
-(global-set-key (kbd "C-c <C-down>") 'windmove-down)
-(global-set-key (kbd "C-c <C-right>") 'windmove-right)
-(global-set-key (kbd "C-c <C-left>") 'windmove-left)
+(define-key evil-window-map (kbd "<C-up>") 'windmove-up)
+(define-key evil-window-map (kbd "<C-down>") 'windmove-down)
+(define-key evil-window-map (kbd "<C-right>") 'windmove-right)
+(define-key evil-window-map (kbd "<C-left>") 'windmove-left)
 
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
@@ -49,7 +49,7 @@
   "d" 'ido-dired
   "k" 'evil-window-delete
   "b" 'ido-switch-buffer
-  "K" 'split-line
+  "nn" 'spacemacs/new-empty-buffer
   "ci" 'evilnc-comment-or-uncomment-lines
   "cl" 'evilnc-comment-or-uncomment-to-the-line
   "cc" 'evilnc-copy-and-comment-lines

@@ -22,3 +22,9 @@ setopt EXTENDED_GLOB
 
 vim +BundleInstall
 chsh -s $(which zsh)
+
+# Windows MKLINK
+
+mklink C:\Users\server\AppData\Roaming\.emacs.d\init.el C:\Users\server\.babun\cygwin\home\server\.dotfiles\init.el
+mklink C:\Users\server\AppData\Roaming\.emacs.d\private C:\Users\server\.babun\cygwin\home\server\.dotfiles\private
+mklink C:\Users\server\AppData\Roaming\.spacemacs C:\Users\server\.babun\cygwin\home\server\.dotfiles\.spacemacs
