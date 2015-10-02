@@ -96,5 +96,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 (toggle-frame-maximized)
 
+(switch-to-buffer "*scratch*")
+
 ;;(split-window-right-and-focus)
 ;;(split-window-below)
