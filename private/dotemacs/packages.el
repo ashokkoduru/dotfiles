@@ -15,8 +15,9 @@
 (setq dotemacs-packages
     '(
       ;; package names go here
-	  relative-line-numbers
+	    relative-line-numbers
       color-theme-solarized
+      hydra
       ))
 
 ;; List of packages to exclude.
@@ -26,9 +27,13 @@
   (use-package relative-line-numbers
     :defer t)
 	(global-relative-line-numbers-mode))
-	
+
 (defun dotemacs/init-color-theme-solarized ()
   (use-package color-theme-solarized
+    :defer t))
+
+(defun dotemacs/init-hydra ()
+  (use-package hydra
     :defer t))
 
 ;; For each package, define a function dotemacs/init-<package-name>
