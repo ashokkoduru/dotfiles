@@ -33,7 +33,7 @@
 )
 
 (defhydra my/window-resize (global-map "<f2>")
-  "Window Resize"
+  "Window Move"
   ("<left>" windmove-left)
   ("<right>" windmove-right)
   ("<up>" windmove-up)
@@ -43,6 +43,13 @@
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
+(global-set-key (kbd "C-<left>") 'sp-backward-slurp-sexp)
+(global-set-key (kbd "C-<right>") 'sp-forward-slurp-sexp)
+(global-set-key (kbd "M-<right>") 'sp-forward-barf-sexp)
+(global-set-key (kbd "M-<left>") 'sp-backward-barf-sexp)
+
+(define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
 
 (evil-leader/set-key
   "/" 'split-window-right
@@ -69,11 +76,8 @@
 (define-key evil-normal-state-map ";bd" 'kill-this-buffer)
 (define-key evil-normal-state-map ";ei" 'my/edit-init-file)
 (define-key evil-normal-state-map ";es" 'my/edit-dotspacemacs-file)
-(define-key evil-normal-state-map ";df" 'describe-function)
-(define-key evil-normal-state-map ";dv" 'describe-variable)
-(define-key evil-normal-state-map ";dk" 'describe-key)
 
-(global-relative-line-numbers-mode)
+;;(global-relative-line-numbers-mode)
 
 ;; (defun minibuffer-keyboard-quit ()
 ;;   "Abort recursive edit.
@@ -97,10 +101,18 @@
 (set-frame-font "Monaco")
 
 (setq-default evil-escape-key-sequence "ESC")
+(setq-default powerline-default-separator 'bar)
 
 (toggle-frame-maximized)
 
 (switch-to-buffer "*scratch*")
 
-;;(split-window-right-and-focus)
-;;(split-window-below)
+;; (setq powerline-separators '(alternate arrow arrow-fade bar box brace butt chamfer contour curve rounded roundstub slant wave zigzag nil))
+
+;; (defun my/cycle-powerline-separators ()
+;;   (interactive)
+;;   (unless powerline-separators
+;;     (setq powerline-separators '(alternate arrow arrow-fade bar box brace butt chamfer contour curve rounded roundstub slant wave zigzag nil)))
+;;   (evil-echo (defvar powerline-default-separator (pop powerline-separators))))
+
+;; (global-set-key (kbd "<f5>") 'my/cycle-powerline-separators)

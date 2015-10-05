@@ -18,6 +18,9 @@
 	    relative-line-numbers
       color-theme-solarized
       hydra
+      ;; php-extras
+      restart-emacs
+      react-snippets
       ))
 
 ;; List of packages to exclude.
@@ -36,6 +39,17 @@
   (use-package hydra
     :defer t))
 
+(defun dotemacs/init-php-extras()
+  (use-package php-extras
+    :defer t))
+
+(defun dotemacs/init-restart-emacs()
+  (use-package restart-emacs
+    :defer t))
+
+(defun dotemacs/init-react-snippets()
+  (use-package react-snippets
+    :defer t))
 ;; For each package, define a function dotemacs/init-<package-name>
 ;;
 ;; (defun dotemacs/init-my-package ()
