@@ -57,7 +57,7 @@
   "^" 'spacemacs/toggle-maximize-buffer
   "d" 'ido-dired
   "k" 'evil-window-delete
-  "b" 'ido-switch-buffer
+  "b" 'helm-buffers-list ;;ido-switch-buffer
   "nn" 'spacemacs/new-empty-buffer
   "ci" 'evilnc-comment-or-uncomment-lines
   "cl" 'evilnc-comment-or-uncomment-to-the-line
@@ -104,8 +104,6 @@
 (setq-default powerline-default-separator 'bar)
 
 (toggle-frame-maximized)
-
-(switch-to-buffer "*scratch*")
 
 ;; (setq powerline-separators '(alternate arrow arrow-fade bar box brace butt chamfer contour curve rounded roundstub slant wave zigzag nil))
 
