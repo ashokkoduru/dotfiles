@@ -45,7 +45,15 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+                                      drag-stuff
+                                      relative-line-numbers
+                                      color-theme-solarized
+                                      hydra
+                                      php-extras
+                                      restart-emacs
+                                      react-snippets
+                                      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -79,7 +87,7 @@ values."
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'.
    ;; (default '(recents projects))
-   dotspacemacs-startup-lists '(recents projects)
+   dotspacemacs-startup-lists '(bookmarks recents projects)
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
@@ -214,7 +222,7 @@ layers configuration. You are free to put any user code."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "19352d62ea0395879be564fc36bc0b4780d9768a964d26dfae8aad218062858d" "3632cf223c62cb7da121be0ed641a2243f7ec0130178722554e613c9ab3131de" "66132890ee1f884b4f8e901f0c61c5ed078809626a547dbefbb201f900d03fd8" "4f81886421185048bd186fbccc98d95fca9c8b6a401771b7457d81f749f5df75" "d737a2131d5ac01c0b2b944e0d2cb0be1c76496bb4ed61be51ff0e5457468974" "bf3ec301ea82ab546efb39c2fdd4412d1188c7382ff3bbadd74a8ecae4121678" default))))
+    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "19352d62ea0395879be564fc36bc0b4780d9768a964d26dfae8aad218062858d" "3632cf223c62cb7da121be0ed641a2243f7ec0130178722554e613c9ab3131de" "66132890ee1f884b4f8e901f0c61c5ed078809626a547dbefbb201f900d03fd8" "4f81886421185048bd186fbccc98d95fca9c8b6a401771b7457d81f749f5df75" "d737a2131d5ac01c0b2b944e0d2cb0be1c76496bb4ed61be51ff0e5457468974" "bf3ec301ea82ab546efb39c2fdd4412d1188c7382ff3bbadd74a8ecae4121678" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

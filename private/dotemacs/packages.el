@@ -15,41 +15,41 @@
 (setq dotemacs-packages
     '(
       ;; package names go here
-	    relative-line-numbers
-      color-theme-solarized
-      hydra
+	    ;; relative-line-numbers
+      ;; color-theme-solarized
+      ;; hydra
       ;; php-extras
-      restart-emacs
-      react-snippets
+      ;; restart-emacs
+      ;; react-snippets
       ))
 
 ;; List of packages to exclude.
 (setq dotemacs-excluded-packages '())
 
-(defun dotemacs/init-relative-line-numbers ()
-  (use-package relative-line-numbers
-    :defer t)
-	(global-relative-line-numbers-mode))
+;; (defun dotemacs/init-relative-line-numbers ()
+;;   (use-package relative-line-numbers
+;;     :defer t)
+;; 	(global-relative-line-numbers-mode))
 
-(defun dotemacs/init-color-theme-solarized ()
-  (use-package color-theme-solarized
-    :defer t))
+;; (defun dotemacs/init-color-theme-solarized ()
+;;   (use-package color-theme-solarized
+;;     :defer t))
 
-(defun dotemacs/init-hydra ()
-  (use-package hydra
-    :defer t))
+;; (defun dotemacs/init-hydra ()
+;;   (use-package hydra
+;;     :defer t))
 
-(defun dotemacs/init-php-extras()
-  (use-package php-extras
-    :defer t))
+;; (defun dotemacs/init-php-extras()
+;;   (use-package php-extras
+;;     :defer t))
 
-(defun dotemacs/init-restart-emacs()
-  (use-package restart-emacs
-    :defer t))
+;; (defun dotemacs/init-restart-emacs()
+;;   (use-package restart-emacs
+;;     :defer t))
 
-(defun dotemacs/init-react-snippets()
-  (use-package react-snippets
-    :defer t))
+;; (defun dotemacs/init-react-snippets()
+;;   (use-package react-snippets
+;;     :defer t))
 ;; For each package, define a function dotemacs/init-<package-name>
 ;;
 ;; (defun dotemacs/init-my-package ()
