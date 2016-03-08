@@ -63,6 +63,8 @@
 ;; (global-set-key [M-up] 'move-text-up)
 ;; (global-set-key [M-down] 'move-text-down)
 
+;; (drag-stuff-global-mode)
+
 (evil-leader/set-key
   "/" 'split-window-right
   "-" 'split-window-below
@@ -75,7 +77,9 @@
   "cl" 'evilnc-comment-or-uncomment-to-the-line
   "cc" 'evilnc-copy-and-comment-lines
   "cp" 'evilnc-comment-or-uncomment-paragraphs
-  "cr" 'comment-or-uncomment-region)
+  "cr" 'comment-or-uncomment-region
+  "ee" 'eshell
+  "ss" 'shell)
 
 (defun my/edit-init-file ()
   (interactive)
@@ -88,17 +92,15 @@
 (define-key evil-normal-state-map ";bd" 'kill-this-buffer)
 (define-key evil-normal-state-map ";ei" 'my/edit-init-file)
 (define-key evil-normal-state-map ";es" 'my/edit-dotspacemacs-file)
+(define-key evil-normal-state-map ";w" 'save-buffer)
 
 ;;(global-relative-line-numbers-mode)
 
-(setq-default
- dotspacemacs-default-theme 'zenburn
-)
- 
-(load-theme 'spacemacs-light)
 (set-frame-font "Monaco")
 
-(setq-default evil-escape-key-sequence "ESC")
+(load-theme 'leuven)
+
+(setq-default evil-escape-key-sequence "fd")
 (setq-default powerline-default-separator 'bar)
 
 (toggle-frame-maximized)
