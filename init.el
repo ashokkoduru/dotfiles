@@ -66,8 +66,8 @@
 ;; (drag-stuff-global-mode)
 
 (evil-leader/set-key
-  "/" 'split-window-right
-  "-" 'split-window-below
+  "/" 'split-window-right-and-focus
+  "-" 'split-window-below-and-focus
   "^" 'spacemacs/toggle-maximize-buffer
   "d" 'ido-dired
   "k" 'evil-window-delete
@@ -78,8 +78,15 @@
   "cc" 'evilnc-copy-and-comment-lines
   "cp" 'evilnc-comment-or-uncomment-paragraphs
   "cr" 'comment-or-uncomment-region
-  "ee" 'eshell
-  "ss" 'shell)
+  "ee" 'my/open-shell-right-and-focus
+  "ss" 'shell
+  "rp" 'my/run-python)
+
+(defun my/run-python()
+  (interactive)
+  (python-shell-send-file '(buffer-file-name))
+  (python-shell-switch-to-shell)
+)
 
 (defun my/edit-init-file ()
   (interactive)
@@ -89,19 +96,32 @@
   (interactive)
   (find-file dotspacemacs-filepath))
 
+(defun my/open-shell-right-and-focus ()
+  (interactive)
+  (split-window-right-and-focus)
+  (eshell)
+  (evil-window-set-width 68)
+)
+
 (define-key evil-normal-state-map ";bd" 'kill-this-buffer)
 (define-key evil-normal-state-map ";ei" 'my/edit-init-file)
 (define-key evil-normal-state-map ";es" 'my/edit-dotspacemacs-file)
-(define-key evil-normal-state-map ";w" 'save-buffer)
+(define-key evil-normal-state-map "ZZ" 'save-buffer)
+(define-key evil-insert-state-map "ZZ" 'save-buffer)
 
 ;;(global-relative-line-numbers-mode)
 
 (set-frame-font "Monaco")
 
+;; (load-theme 'leuven)
 (load-theme 'leuven)
 
 (setq-default evil-escape-key-sequence "fd")
-(setq-default powerline-default-separator 'bar)
+(setq-default powerline-default-separator 'arrow)
+
+(add-hook 'python-mode-hook
+          '(lambda()
+             (setq python-indent-offset 4)))
 
 (toggle-frame-maximized)
 
@@ -114,3 +134,14 @@
 ;;   (evil-echo (defvar powerline-default-separator (pop powerline-separators))))
 
 ;; (global-set-key (kbd "<f5>") 'my/cycle-powerline-separators)
+
+(defun evil-replace-word-under-cursor()
+  (interactive)
+  (if (use-region-p)
+      (let
+      (selection (buffer-substring-no-properties (region-beginning) (region-end)))
+    (if (= (length selection) 0)
+        (message "empty string")
+      (evil-ex (concat "'<,'>s/" selection "/"))))
+    (evil-ex (concat "%s/" (thing-at-point 'word) "/")))
+  )
