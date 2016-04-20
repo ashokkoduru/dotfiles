@@ -17,6 +17,7 @@ export TERM=xterm-256color
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 export GOBIN=$GOROOT/bin
+export GOPATH=~/go
 
 autoload -U compinit
 compinit
