@@ -4,6 +4,9 @@ set modifiable
 
 set scrolljump=5
 
+" Search and replace word under cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
 " Shortcut to rapidly toggle `set list`
 nmap <leader>ls :set list!<CR>
 
@@ -33,8 +36,8 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "let g:airline_theme='kolor'
 "let g:airline_theme='laederon'
 "let g:airline_theme='light'
-let g:airline_theme='murmur'
-"let g:airline_theme='luna'
+"let g:airline_theme='murmur'
+let g:airline_theme='luna'
 let g:airline_section_b = '%{getcwd()}'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#branch#enabled = 1
@@ -78,7 +81,7 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
 
 set background=dark
-colorscheme gruvbox 
+colorscheme gruvbox
 set rnu " Toggle number line
 set nu
 
@@ -121,6 +124,7 @@ Plugin 'terryma/vim-smooth-scroll'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-misc'
 Plugin 'tpope/vim-fugitiv'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -251,7 +255,7 @@ set noundofile
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 		        
             
 " Be smart when using tabs ;)
@@ -544,7 +548,7 @@ nnoremap <leader>k zr
 
 " Pymode related stuff
 let g:pymode_rope=0
-let g:pymode_folding=1
+let g:pymode_folding=0
 let g:pymode_lint = 0
 let g:pymode_options_max_line_length = 500
 
