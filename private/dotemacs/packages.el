@@ -21,11 +21,18 @@
       ;; php-extras
       ;; restart-emacs
       ;; react-snippets
+	  ;; smart-mode-line
+	  ;; smart-mode-line-powerline-theme
       ))
 
 ;; List of packages to exclude.
 (setq dotemacs-excluded-packages '())
 
+;;(defun dotemacs/init-smart-mode-line-powerline-theme()
+;;	(setq sml/theme 'powerline)
+	;;(sml/setup)
+;;)
+	
 ;; (defun dotemacs/init-relative-line-numbers ()
 ;;   (use-package relative-line-numbers
 ;;     :defer t)

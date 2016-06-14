@@ -30,39 +30,19 @@ prompt steeef
 
 # To list directories first
 alias ls='ls --color -h --group-directories-first'
+alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
+alias dotfiles="cd ~/.dotfiles"
+alias dev="cd ~/dev"
+alias dotvim="cd ~/.vim"
+alias home="cd ~"
+alias gpom="git push origin master"
+alias update="git fetch --all && git reset --hard origin/master"
+
+source "/var/www/dlsite/alias.sh"
 
 gacp() {
     git add --all . && git commit -m "$1" && git push origin master
-}
-
-update() {
-    git fetch --all && git reset --hard origin/master
-}
-
-gpom() {
-    git push origin master
-}
-
-dev() {
-    cd ~/dev
-}
-zshrc() {
-    vim ~/.zshrc
-}
-
-vimrc() {
-    vim ~/.vimrc
-}
-
-dotfiles() {
-    cd ~/.dotfiles
-}
-dotvim() {
-    cd ~/.vim
-}
-
-home() {
-    cd ~
 }
 
 mp3dl() {
