@@ -1,19 +1,14 @@
 apt-get install pptpd -y
 
-vim /etc/pptpd.conf
-> localip 10.0.0.1
-> remoteip 10.0.0.100-200
+cp ~/.dotfiles/misc/pptpd.conf /etc/pptpd.conf
+cp ~/.dotfiles/misc/chap-secrets /etc/ppp/chap-secrets
+cp ~/.dotfiles/misc/pptpd-options /etc/ppp/pptpd-options
 
-vim /etc/ppp/chap-secrets
-> box1 pptpd <password> *
-
-vim /etc/ppp/pptpd-options
-> ms-dns 8.8.8.8
-> ms-dns 8.8.4.4
+vim +96 /etc/pptpd.conf
+vim +3 /etc/ppp/chap-secrets
 
 service pptpd restart
 
-vim /etc/sysctl.conf
-> net.ipv4.ip_forward = 1
+vim +28 /etc/sysctl.conf
 
 sysctl -p
