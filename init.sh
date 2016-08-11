@@ -1,6 +1,6 @@
 cd ~
 
-sudo apt-get install cmake build-essential python2.7-dev zsh unzip htop exuberant-ctags tofrodos -y
+sudo apt-get install cmake build-essential python2.7-dev zsh unzip htop exuberant-ctags tofrodos vim-nox -y
 
 git clone https://github.com/haseebr/dotfiles ".dotfiles"
 git clone https://github.com/VundleVim/Vundle.vim ".dotfiles/vim/bundle/Vundle.vim"
