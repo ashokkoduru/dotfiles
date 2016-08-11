@@ -39,8 +39,6 @@ alias home="cd ~"
 alias gpom="git push origin master"
 alias update="git fetch --all && git reset --hard origin/master"
 
-source "/var/www/dlsite/alias.sh"
-
 gacp() {
     git add --all . && git commit -m "$1" && git push origin master
 }

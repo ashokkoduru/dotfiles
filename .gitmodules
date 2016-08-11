@@ -5,3 +5,7 @@
 [submodule "zprezto"]
     path = zprezto
     url = https://github.com/sorin-ionescu/prezto
+    
+[submodule "monacofont"]
+    path = monacofont
+    url = https://gist.github.com/kevinis/c788f85a654b2d7581d8
