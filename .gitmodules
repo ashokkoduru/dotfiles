@@ -6,6 +6,6 @@
     path = zprezto
     url = https://github.com/sorin-ionescu/prezto
     
-[submodule " solarized-and-modern-putty"]
+[submodule "solarized-and-modern-putty"]
     path = solarized-and-modern-putty
     url = https://github.com/jblaine/solarized-and-modern-putty
