@@ -35,7 +35,8 @@
 
 (defun dotemacs/init-nvm ()
   (require 'nvm)
-  (nvm-use (caar (last (nvm--installed-versions)))))
+  ;;(nvm-use (caar (last (nvm--installed-versions))))
+  )
 
 ;;(defun dotemacs/init-smart-mode-line-powerline-theme()
 ;;	(setq sml/theme 'powerline)
