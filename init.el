@@ -79,7 +79,8 @@
   "ss" 'shell
   "rp" 'my/run-python
   "ei" 'my/edit-init-file
-  "es" 'my/edit-dotspacemacs-file)
+  "es" 'my/edit-dotspacemacs-file
+  "ff" 'projectile-find-file)
 
 (defun my/run-python()
   (interactive)
@@ -434,3 +435,23 @@
   ;;
   ("_" sp-join-sexp ) ;;Good
   ("|" sp-split-sexp )) 
+
+(add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
+(setq web-mode-markup-indent-offset 2
+      web-mode-css-indent-offset 2
+      web-mode-code-indent-offset 2)
+(setq js-indent-level 2)
+
+
+(add-hook 'projectile-after-switch-project-hook 'mjs/setup-local-eslint)
+
+(defun mjs/setup-local-eslint ()
+  "If ESLint found in node_modules directory - use that for flycheck.
+Intended for use in PROJECTILE-AFTER-SWITCH-PROJECT-HOOK."
+  (interactive)
+  (let ((local-eslint (expand-file-name "./node_modules/.bin/eslint")))
+    (setq flycheck-javascript-eslint-executable
+          (and (file-exists-p local-eslint) local-eslint))))
+
+(with-eval-after-load 'flycheck
+  (push 'web-mode (flycheck-checker-get 'javascript-eslint 'modes))))

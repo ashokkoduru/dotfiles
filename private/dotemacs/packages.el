@@ -23,10 +23,19 @@
       ;; react-snippets
 	  ;; smart-mode-line
 	  ;; smart-mode-line-powerline-theme
+      switch-window
+      nvm
       ))
 
 ;; List of packages to exclude.
 (setq dotemacs-excluded-packages '())
+
+(defun dotemacs/init-switch-window ()
+  (global-set-key (kbd "C-x o") 'switch-window))
+
+(defun dotemacs/init-nvm ()
+  (require 'nvm)
+  (nvm-use (caar (last (nvm--installed-versions)))))
 
 ;;(defun dotemacs/init-smart-mode-line-powerline-theme()
 ;;	(setq sml/theme 'powerline)
