@@ -123,9 +123,9 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'terryma/vim-smooth-scroll'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-misc'
-Plugin 'tpope/vim-fugitiv'
+Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline-themes'
-
+Plugin 'jez/vim-better-sml'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
